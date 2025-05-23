@@ -15,10 +15,12 @@
 #include <random>
 
 #ifdef _WIN32
-#include <windows.h>
+#define WIN32_LEAN_AND_MEAN
 #include <winsock2.h>
+#include <windows.h>
 #include <iphlpapi.h>
 #include <psapi.h>
+#include <tlhelp32.h>
 #pragma comment(lib, "ws2_32.lib")
 #pragma comment(lib, "iphlpapi.lib")
 #pragma comment(lib, "psapi.lib")
